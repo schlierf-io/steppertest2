@@ -661,6 +661,441 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "SimpleStepperComponent",
+            "id": "component-SimpleStepperComponent-6d8a569faff37b1dddca0095fa9ea62aa2b5a24d0dd0d973e1ce07d8ee2a7b236e956d32fe6ed0234dd9a338948a686bf0557a6c547398366c49fca59bf3e914",
+            "file": "src/app/components/simple-stepper/simple-stepper.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-simple-stepper",
+            "styleUrls": [],
+            "styles": [
+                "\n    .step-content {\n      padding: 16px;\n      min-height: 200px;\n    }\n    \n    .step-content h3 {\n      margin-top: 0;\n      color: rgba(0, 0, 0, 0.87);\n    }\n    \n    .step-content p {\n      color: rgba(0, 0, 0, 0.6);\n      line-height: 1.5;\n      margin-bottom: 24px;\n    }\n    \n    .button-row {\n      display: flex;\n      gap: 8px;\n      align-items: center;\n    }\n    \n    mat-stepper {\n      max-width: 600px;\n    }\n  "
+            ],
+            "template": "<mat-stepper\n  [orientation]=\"orientation\"\n  [linear]=\"linear\"\n  #stepper>\n\n  <mat-step [completed]=\"step1Completed\">\n    <ng-template matStepLabel>{{ step1Label }}</ng-template>\n    <div class=\"step-content\">\n      <h3>{{ step1Title }}</h3>\n      <p>{{ step1Content }}</p>\n      <div class=\"button-row\">\n        <button mat-raised-button color=\"primary\"\n                (click)=\"markStepCompleted(1)\"\n                matStepperNext>\n          {{ step1ButtonText }}\n        </button>\n      </div>\n    </div>\n  </mat-step>\n\n  <mat-step [completed]=\"step2Completed\">\n    <ng-template matStepLabel>{{ step2Label }}</ng-template>\n    <div class=\"step-content\">\n      <h3>{{ step2Title }}</h3>\n      <p>{{ step2Content }}</p>\n      <div class=\"button-row\">\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-raised-button color=\"primary\"\n                (click)=\"markStepCompleted(2)\"\n                matStepperNext>\n          {{ step2ButtonText }}\n        </button>\n      </div>\n    </div>\n  </mat-step>\n\n  <mat-step [completed]=\"step3Completed\">\n    <ng-template matStepLabel>{{ step3Label }}</ng-template>\n    <div class=\"step-content\">\n      <h3>{{ step3Title }}</h3>\n      <p>{{ step3Content }}</p>\n      <div class=\"button-row\">\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-raised-button color=\"accent\"\n                (click)=\"markStepCompleted(3)\">\n          <mat-icon>check</mat-icon>\n          {{ step3ButtonText }}\n        </button>\n        <button mat-button (click)=\"resetStepper(stepper)\">Reset</button>\n      </div>\n    </div>\n  </mat-step>\n</mat-stepper>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "linear",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 95,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "orientation",
+                    "defaultValue": "'horizontal'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 94,
+                    "type": "\"horizontal\" | \"vertical\"",
+                    "decorators": []
+                },
+                {
+                    "name": "step1ButtonText",
+                    "defaultValue": "'Continue'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 101,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step1Content",
+                    "defaultValue": "'Welcome to the first step of our process. This is where you begin your journey.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 100,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step1Label",
+                    "defaultValue": "'Step 1'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 98,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step1Title",
+                    "defaultValue": "'Getting Started'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 99,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step2ButtonText",
+                    "defaultValue": "'Next'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 107,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step2Content",
+                    "defaultValue": "'In this step, you can configure your preferences and settings.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 106,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step2Label",
+                    "defaultValue": "'Step 2'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 104,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step2Title",
+                    "defaultValue": "'Configuration'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 105,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step3ButtonText",
+                    "defaultValue": "'Finish'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 113,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step3Content",
+                    "defaultValue": "'Congratulations! You have reached the final step. Review and complete your process.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 112,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step3Label",
+                    "defaultValue": "'Step 3'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 110,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "step3Title",
+                    "defaultValue": "'Completion'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 111,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "step1Completed",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 115
+                },
+                {
+                    "name": "step2Completed",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 116
+                },
+                {
+                    "name": "step3Completed",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 117
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "markStepCompleted",
+                    "args": [
+                        {
+                            "name": "stepNumber",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 119,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "stepNumber",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "resetStepper",
+                    "args": [
+                        {
+                            "name": "stepper",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 134,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "stepper",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatStepperModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatStepperModule } from '@angular/material/stepper';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'app-simple-stepper',\n  standalone: true,\n  imports: [MatStepperModule, MatButtonModule, MatIconModule],\n  template: `\n    <mat-stepper \n      [orientation]=\"orientation\" \n      [linear]=\"linear\"\n      #stepper>\n      \n      <mat-step [completed]=\"step1Completed\">\n        <ng-template matStepLabel>{{ step1Label }}</ng-template>\n        <div class=\"step-content\">\n          <h3>{{ step1Title }}</h3>\n          <p>{{ step1Content }}</p>\n          <div class=\"button-row\">\n            <button mat-raised-button color=\"primary\" \n                    (click)=\"markStepCompleted(1)\" \n                    matStepperNext>\n              {{ step1ButtonText }}\n            </button>\n          </div>\n        </div>\n      </mat-step>\n\n      <mat-step [completed]=\"step2Completed\">\n        <ng-template matStepLabel>{{ step2Label }}</ng-template>\n        <div class=\"step-content\">\n          <h3>{{ step2Title }}</h3>\n          <p>{{ step2Content }}</p>\n          <div class=\"button-row\">\n            <button mat-button matStepperPrevious>Back</button>\n            <button mat-raised-button color=\"primary\" \n                    (click)=\"markStepCompleted(2)\" \n                    matStepperNext>\n              {{ step2ButtonText }}\n            </button>\n          </div>\n        </div>\n      </mat-step>\n\n      <mat-step [completed]=\"step3Completed\">\n        <ng-template matStepLabel>{{ step3Label }}</ng-template>\n        <div class=\"step-content\">\n          <h3>{{ step3Title }}</h3>\n          <p>{{ step3Content }}</p>\n          <div class=\"button-row\">\n            <button mat-button matStepperPrevious>Back</button>\n            <button mat-raised-button color=\"accent\" \n                    (click)=\"markStepCompleted(3)\">\n              <mat-icon>check</mat-icon>\n              {{ step3ButtonText }}\n            </button>\n            <button mat-button (click)=\"resetStepper(stepper)\">Reset</button>\n          </div>\n        </div>\n      </mat-step>\n    </mat-stepper>\n  `,\n  styles: [`\n    .step-content {\n      padding: 16px;\n      min-height: 200px;\n    }\n    \n    .step-content h3 {\n      margin-top: 0;\n      color: rgba(0, 0, 0, 0.87);\n    }\n    \n    .step-content p {\n      color: rgba(0, 0, 0, 0.6);\n      line-height: 1.5;\n      margin-bottom: 24px;\n    }\n    \n    .button-row {\n      display: flex;\n      gap: 8px;\n      align-items: center;\n    }\n    \n    mat-stepper {\n      max-width: 600px;\n    }\n  `],\n})\nexport class SimpleStepperComponent {\n  @Input() orientation: 'horizontal' | 'vertical' = 'horizontal';\n  @Input() linear: boolean = true;\n  \n  // Step 1 properties\n  @Input() step1Label: string = 'Step 1';\n  @Input() step1Title: string = 'Getting Started';\n  @Input() step1Content: string = 'Welcome to the first step of our process. This is where you begin your journey.';\n  @Input() step1ButtonText: string = 'Continue';\n  \n  // Step 2 properties\n  @Input() step2Label: string = 'Step 2';\n  @Input() step2Title: string = 'Configuration';\n  @Input() step2Content: string = 'In this step, you can configure your preferences and settings.';\n  @Input() step2ButtonText: string = 'Next';\n  \n  // Step 3 properties\n  @Input() step3Label: string = 'Step 3';\n  @Input() step3Title: string = 'Completion';\n  @Input() step3Content: string = 'Congratulations! You have reached the final step. Review and complete your process.';\n  @Input() step3ButtonText: string = 'Finish';\n\n  step1Completed = false;\n  step2Completed = false;\n  step3Completed = false;\n\n  markStepCompleted(stepNumber: number) {\n    switch (stepNumber) {\n      case 1:\n        this.step1Completed = true;\n        break;\n      case 2:\n        this.step2Completed = true;\n        break;\n      case 3:\n        this.step3Completed = true;\n        console.log('Process completed!');\n        break;\n    }\n  }\n\n  resetStepper(stepper: any) {\n    this.step1Completed = false;\n    this.step2Completed = false;\n    this.step3Completed = false;\n    stepper.reset();\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    .step-content {\n      padding: 16px;\n      min-height: 200px;\n    }\n    \n    .step-content h3 {\n      margin-top: 0;\n      color: rgba(0, 0, 0, 0.87);\n    }\n    \n    .step-content p {\n      color: rgba(0, 0, 0, 0.6);\n      line-height: 1.5;\n      margin-bottom: 24px;\n    }\n    \n    .button-row {\n      display: flex;\n      gap: 8px;\n      align-items: center;\n    }\n    \n    mat-stepper {\n      max-width: 600px;\n    }\n  \n",
+            "extends": []
+        },
+        {
+            "name": "StepperExampleComponent",
+            "id": "component-StepperExampleComponent-9d495b4750692ccf4e3aae525cd320c25766aaceba491a4922437d5d3e39b79b635cc40139faf643a87f8dd48f4b7dbfbff971de77350a3c6fcd40836494bb24",
+            "file": "src/app/components/stepper-example/stepper-example.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-stepper-example",
+            "styleUrls": [],
+            "styles": [
+                "\n    .full-width {\n      width: 100%;\n      margin-bottom: 16px;\n    }\n    \n    .button-row {\n      margin-top: 16px;\n      display: flex;\n      gap: 8px;\n    }\n    \n    .address-row {\n      display: flex;\n      gap: 16px;\n      margin-bottom: 16px;\n    }\n    \n    .city-field {\n      flex: 2;\n    }\n    \n    .zip-field {\n      flex: 1;\n    }\n    \n    .review-section {\n      padding: 16px;\n      background-color: #f5f5f5;\n      border-radius: 4px;\n      margin-bottom: 16px;\n    }\n    \n    .review-item {\n      margin-bottom: 8px;\n      padding: 4px 0;\n    }\n    \n    mat-stepper {\n      max-width: 600px;\n    }\n    \n    @media (max-width: 768px) {\n      .address-row {\n        flex-direction: column;\n        gap: 0;\n      }\n      \n      .city-field,\n      .zip-field {\n        flex: 1;\n        margin-bottom: 16px;\n      }\n    }\n  "
+            ],
+            "template": "<mat-stepper\n  [orientation]=\"orientation\"\n  [linear]=\"linear\"\n  [labelPosition]=\"labelPosition\"\n  #stepper>\n\n  <!-- Step 1: Personal Information -->\n  <mat-step [stepControl]=\"firstFormGroup\" [editable]=\"editable\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Personal Information</ng-template>\n\n      <mat-form-field appearance=\"outline\" class=\"full-width\">\n        <mat-label>First Name</mat-label>\n        <input matInput placeholder=\"Enter your first name\"\n               formControlName=\"firstNameCtrl\" required>\n        <mat-error *ngIf=\"firstFormGroup.get('firstNameCtrl')?.hasError('required')\">\n          First name is required\n        </mat-error>\n      </mat-form-field>\n\n      <mat-form-field appearance=\"outline\" class=\"full-width\">\n        <mat-label>Last Name</mat-label>\n        <input matInput placeholder=\"Enter your last name\"\n               formControlName=\"lastNameCtrl\" required>\n        <mat-error *ngIf=\"firstFormGroup.get('lastNameCtrl')?.hasError('required')\">\n          Last name is required\n        </mat-error>\n      </mat-form-field>\n\n      <div class=\"button-row\">\n        <button mat-raised-button color=\"primary\" matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n\n  <!-- Step 2: Contact Information -->\n  <mat-step [stepControl]=\"secondFormGroup\" [editable]=\"editable\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Contact Information</ng-template>\n\n      <mat-form-field appearance=\"outline\" class=\"full-width\">\n        <mat-label>Email</mat-label>\n        <input matInput placeholder=\"Enter your email\"\n               formControlName=\"emailCtrl\" required type=\"email\">\n        <mat-error *ngIf=\"secondFormGroup.get('emailCtrl')?.hasError('required')\">\n          Email is required\n        </mat-error>\n        <mat-error *ngIf=\"secondFormGroup.get('emailCtrl')?.hasError('email')\">\n          Please enter a valid email\n        </mat-error>\n      </mat-form-field>\n\n      <mat-form-field appearance=\"outline\" class=\"full-width\">\n        <mat-label>Phone Number</mat-label>\n        <input matInput placeholder=\"Enter your phone number\"\n               formControlName=\"phoneCtrl\" required>\n        <mat-error *ngIf=\"secondFormGroup.get('phoneCtrl')?.hasError('required')\">\n          Phone number is required\n        </mat-error>\n      </mat-form-field>\n\n      <div class=\"button-row\">\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-raised-button color=\"primary\" matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n\n  <!-- Step 3: Address Information -->\n  <mat-step [stepControl]=\"thirdFormGroup\" [editable]=\"editable\">\n    <form [formGroup]=\"thirdFormGroup\">\n      <ng-template matStepLabel>Address</ng-template>\n\n      <mat-form-field appearance=\"outline\" class=\"full-width\">\n        <mat-label>Street Address</mat-label>\n        <input matInput placeholder=\"Enter your street address\"\n               formControlName=\"addressCtrl\" required>\n        <mat-error *ngIf=\"thirdFormGroup.get('addressCtrl')?.hasError('required')\">\n          Address is required\n        </mat-error>\n      </mat-form-field>\n\n      <div class=\"address-row\">\n        <mat-form-field appearance=\"outline\" class=\"city-field\">\n          <mat-label>City</mat-label>\n          <input matInput placeholder=\"City\"\n                 formControlName=\"cityCtrl\" required>\n        </mat-form-field>\n\n        <mat-form-field appearance=\"outline\" class=\"zip-field\">\n          <mat-label>ZIP Code</mat-label>\n          <input matInput placeholder=\"ZIP\"\n                 formControlName=\"zipCtrl\" required>\n        </mat-form-field>\n      </div>\n\n      <div class=\"button-row\">\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-raised-button color=\"primary\" matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n\n  <!-- Step 4: Review & Submit -->\n  <mat-step [editable]=\"editable\">\n    <ng-template matStepLabel>Review & Submit</ng-template>\n\n    <div class=\"review-section\">\n      <h3>Please review your information:</h3>\n\n      <div class=\"review-item\">\n        <strong>Name:</strong>\n        {{ firstFormGroup.get('firstNameCtrl')?.value }}\n        {{ firstFormGroup.get('lastNameCtrl')?.value }}\n      </div>\n\n      <div class=\"review-item\">\n        <strong>Email:</strong> {{ secondFormGroup.get('emailCtrl')?.value }}\n      </div>\n\n      <div class=\"review-item\">\n        <strong>Phone:</strong> {{ secondFormGroup.get('phoneCtrl')?.value }}\n      </div>\n\n      <div class=\"review-item\">\n        <strong>Address:</strong>\n        {{ thirdFormGroup.get('addressCtrl')?.value }},\n        {{ thirdFormGroup.get('cityCtrl')?.value }}\n        {{ thirdFormGroup.get('zipCtrl')?.value }}\n      </div>\n    </div>\n\n    <div class=\"button-row\">\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-raised-button color=\"accent\" (click)=\"onSubmit()\">\n        <mat-icon>check</mat-icon>\n        Submit\n      </button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "editable",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 223,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "labelPosition",
+                    "defaultValue": "'end'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 224,
+                    "type": "\"bottom\" | \"end\"",
+                    "decorators": []
+                },
+                {
+                    "name": "linear",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 222,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "orientation",
+                    "defaultValue": "'horizontal'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 221,
+                    "type": "\"horizontal\" | \"vertical\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "firstFormGroup",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 226
+                },
+                {
+                    "name": "secondFormGroup",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 227
+                },
+                {
+                    "name": "thirdFormGroup",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 228
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onSubmit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 248,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatStepperModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatFormFieldModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatInputModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatStepperModule } from '@angular/material/stepper';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'app-stepper-example',\n  standalone: true,\n  imports: [\n    MatStepperModule,\n    MatButtonModule,\n    MatFormFieldModule,\n    MatInputModule,\n    MatIconModule,\n    ReactiveFormsModule\n  ],\n  template: `\n    <mat-stepper \n      [orientation]=\"orientation\" \n      [linear]=\"linear\"\n      [labelPosition]=\"labelPosition\"\n      #stepper>\n      \n      <!-- Step 1: Personal Information -->\n      <mat-step [stepControl]=\"firstFormGroup\" [editable]=\"editable\">\n        <form [formGroup]=\"firstFormGroup\">\n          <ng-template matStepLabel>Personal Information</ng-template>\n          \n          <mat-form-field appearance=\"outline\" class=\"full-width\">\n            <mat-label>First Name</mat-label>\n            <input matInput placeholder=\"Enter your first name\" \n                   formControlName=\"firstNameCtrl\" required>\n            <mat-error *ngIf=\"firstFormGroup.get('firstNameCtrl')?.hasError('required')\">\n              First name is required\n            </mat-error>\n          </mat-form-field>\n          \n          <mat-form-field appearance=\"outline\" class=\"full-width\">\n            <mat-label>Last Name</mat-label>\n            <input matInput placeholder=\"Enter your last name\" \n                   formControlName=\"lastNameCtrl\" required>\n            <mat-error *ngIf=\"firstFormGroup.get('lastNameCtrl')?.hasError('required')\">\n              Last name is required\n            </mat-error>\n          </mat-form-field>\n          \n          <div class=\"button-row\">\n            <button mat-raised-button color=\"primary\" matStepperNext>Next</button>\n          </div>\n        </form>\n      </mat-step>\n\n      <!-- Step 2: Contact Information -->\n      <mat-step [stepControl]=\"secondFormGroup\" [editable]=\"editable\">\n        <form [formGroup]=\"secondFormGroup\">\n          <ng-template matStepLabel>Contact Information</ng-template>\n          \n          <mat-form-field appearance=\"outline\" class=\"full-width\">\n            <mat-label>Email</mat-label>\n            <input matInput placeholder=\"Enter your email\" \n                   formControlName=\"emailCtrl\" required type=\"email\">\n            <mat-error *ngIf=\"secondFormGroup.get('emailCtrl')?.hasError('required')\">\n              Email is required\n            </mat-error>\n            <mat-error *ngIf=\"secondFormGroup.get('emailCtrl')?.hasError('email')\">\n              Please enter a valid email\n            </mat-error>\n          </mat-form-field>\n          \n          <mat-form-field appearance=\"outline\" class=\"full-width\">\n            <mat-label>Phone Number</mat-label>\n            <input matInput placeholder=\"Enter your phone number\" \n                   formControlName=\"phoneCtrl\" required>\n            <mat-error *ngIf=\"secondFormGroup.get('phoneCtrl')?.hasError('required')\">\n              Phone number is required\n            </mat-error>\n          </mat-form-field>\n          \n          <div class=\"button-row\">\n            <button mat-button matStepperPrevious>Back</button>\n            <button mat-raised-button color=\"primary\" matStepperNext>Next</button>\n          </div>\n        </form>\n      </mat-step>\n\n      <!-- Step 3: Address Information -->\n      <mat-step [stepControl]=\"thirdFormGroup\" [editable]=\"editable\">\n        <form [formGroup]=\"thirdFormGroup\">\n          <ng-template matStepLabel>Address</ng-template>\n          \n          <mat-form-field appearance=\"outline\" class=\"full-width\">\n            <mat-label>Street Address</mat-label>\n            <input matInput placeholder=\"Enter your street address\" \n                   formControlName=\"addressCtrl\" required>\n            <mat-error *ngIf=\"thirdFormGroup.get('addressCtrl')?.hasError('required')\">\n              Address is required\n            </mat-error>\n          </mat-form-field>\n          \n          <div class=\"address-row\">\n            <mat-form-field appearance=\"outline\" class=\"city-field\">\n              <mat-label>City</mat-label>\n              <input matInput placeholder=\"City\" \n                     formControlName=\"cityCtrl\" required>\n            </mat-form-field>\n            \n            <mat-form-field appearance=\"outline\" class=\"zip-field\">\n              <mat-label>ZIP Code</mat-label>\n              <input matInput placeholder=\"ZIP\" \n                     formControlName=\"zipCtrl\" required>\n            </mat-form-field>\n          </div>\n          \n          <div class=\"button-row\">\n            <button mat-button matStepperPrevious>Back</button>\n            <button mat-raised-button color=\"primary\" matStepperNext>Next</button>\n          </div>\n        </form>\n      </mat-step>\n\n      <!-- Step 4: Review & Submit -->\n      <mat-step [editable]=\"editable\">\n        <ng-template matStepLabel>Review & Submit</ng-template>\n        \n        <div class=\"review-section\">\n          <h3>Please review your information:</h3>\n          \n          <div class=\"review-item\">\n            <strong>Name:</strong> \n            {{ firstFormGroup.get('firstNameCtrl')?.value }} \n            {{ firstFormGroup.get('lastNameCtrl')?.value }}\n          </div>\n          \n          <div class=\"review-item\">\n            <strong>Email:</strong> {{ secondFormGroup.get('emailCtrl')?.value }}\n          </div>\n          \n          <div class=\"review-item\">\n            <strong>Phone:</strong> {{ secondFormGroup.get('phoneCtrl')?.value }}\n          </div>\n          \n          <div class=\"review-item\">\n            <strong>Address:</strong> \n            {{ thirdFormGroup.get('addressCtrl')?.value }}, \n            {{ thirdFormGroup.get('cityCtrl')?.value }} \n            {{ thirdFormGroup.get('zipCtrl')?.value }}\n          </div>\n        </div>\n        \n        <div class=\"button-row\">\n          <button mat-button matStepperPrevious>Back</button>\n          <button mat-raised-button color=\"accent\" (click)=\"onSubmit()\">\n            <mat-icon>check</mat-icon>\n            Submit\n          </button>\n          <button mat-button (click)=\"stepper.reset()\">Reset</button>\n        </div>\n      </mat-step>\n    </mat-stepper>\n  `,\n  styles: [`\n    .full-width {\n      width: 100%;\n      margin-bottom: 16px;\n    }\n    \n    .button-row {\n      margin-top: 16px;\n      display: flex;\n      gap: 8px;\n    }\n    \n    .address-row {\n      display: flex;\n      gap: 16px;\n      margin-bottom: 16px;\n    }\n    \n    .city-field {\n      flex: 2;\n    }\n    \n    .zip-field {\n      flex: 1;\n    }\n    \n    .review-section {\n      padding: 16px;\n      background-color: #f5f5f5;\n      border-radius: 4px;\n      margin-bottom: 16px;\n    }\n    \n    .review-item {\n      margin-bottom: 8px;\n      padding: 4px 0;\n    }\n    \n    mat-stepper {\n      max-width: 600px;\n    }\n    \n    @media (max-width: 768px) {\n      .address-row {\n        flex-direction: column;\n        gap: 0;\n      }\n      \n      .city-field,\n      .zip-field {\n        flex: 1;\n        margin-bottom: 16px;\n      }\n    }\n  `],\n})\nexport class StepperExampleComponent {\n  @Input() orientation: 'horizontal' | 'vertical' = 'horizontal';\n  @Input() linear: boolean = true;\n  @Input() editable: boolean = true;\n  @Input() labelPosition: 'bottom' | 'end' = 'end';\n\n  firstFormGroup: FormGroup;\n  secondFormGroup: FormGroup;\n  thirdFormGroup: FormGroup;\n\n  constructor(private formBuilder: FormBuilder) {\n    this.firstFormGroup = this.formBuilder.group({\n      firstNameCtrl: ['', Validators.required],\n      lastNameCtrl: ['', Validators.required],\n    });\n\n    this.secondFormGroup = this.formBuilder.group({\n      emailCtrl: ['', [Validators.required, Validators.email]],\n      phoneCtrl: ['', Validators.required],\n    });\n\n    this.thirdFormGroup = this.formBuilder.group({\n      addressCtrl: ['', Validators.required],\n      cityCtrl: ['', Validators.required],\n      zipCtrl: ['', Validators.required],\n    });\n  }\n\n  onSubmit() {\n    const formData = {\n      personal: this.firstFormGroup.value,\n      contact: this.secondFormGroup.value,\n      address: this.thirdFormGroup.value,\n    };\n    console.log('Form submitted:', formData);\n    alert('Form submitted successfully! Check the console for details.');\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    .full-width {\n      width: 100%;\n      margin-bottom: 16px;\n    }\n    \n    .button-row {\n      margin-top: 16px;\n      display: flex;\n      gap: 8px;\n    }\n    \n    .address-row {\n      display: flex;\n      gap: 16px;\n      margin-bottom: 16px;\n    }\n    \n    .city-field {\n      flex: 2;\n    }\n    \n    .zip-field {\n      flex: 1;\n    }\n    \n    .review-section {\n      padding: 16px;\n      background-color: #f5f5f5;\n      border-radius: 4px;\n      margin-bottom: 16px;\n    }\n    \n    .review-item {\n      margin-bottom: 8px;\n      padding: 4px 0;\n    }\n    \n    mat-stepper {\n      max-width: 600px;\n    }\n    \n    @media (max-width: 768px) {\n      .address-row {\n        flex-direction: column;\n        gap: 0;\n      }\n      \n      .city-field,\n      .zip-field {\n        flex: 1;\n        margin-bottom: 16px;\n      }\n    }\n  \n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "formBuilder",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 228,
+                "jsdoctags": [
+                    {
+                        "name": "formBuilder",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": []
         }
     ],
     "modules": [],
@@ -700,7 +1135,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 9,
+        "count": 7,
         "status": "low",
         "files": [
             {
@@ -747,6 +1182,24 @@
                 "name": "NavBarComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/simple-stepper/simple-stepper.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SimpleStepperComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/20",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/stepper-example/stepper-example.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StepperExampleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
                 "status": "low"
             },
             {

@@ -4,23 +4,105 @@ import { StepperExampleComponent } from './stepper-example.component';
 const meta: Meta<StepperExampleComponent> = {
   title: 'Components/Navigation/Stepper',
   component: StepperExampleComponent,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {
       description: {
         component: `
-Angular Material Stepper provides a wizard-like workflow by dividing content into logical steps.
+# Angular Material Stepper Component
 
-This example demonstrates:
-- Multi-step form with validation
-- Linear and non-linear navigation
-- Horizontal and vertical orientations
-- Editable and non-editable steps
-- Form validation with error messages
-- Review step with summary
+The Angular Material Stepper provides a wizard-like workflow by dividing content into logical steps. This component is perfect for multi-step forms, onboarding flows, and any process that requires sequential user input.
+
+## Key Features
+
+### 🔄 Multiple Navigation Modes
+- **Linear**: Users must complete each step in order
+- **Non-linear**: Users can navigate freely between steps
+
+### ✏️ Editable Steps
+- Allow users to return and modify completed steps
+- Lock completed steps to prevent changes
+
+### 📱 Responsive Design
+- Horizontal layout for desktop
+- Vertical layout optimized for mobile
+- Flexible label positioning
+
+### ✅ Form Validation
+- Real-time validation feedback
+- Required field validation
+- Email format validation
+- Error messages for each field
+
+### 📋 Review & Submit
+- Summary of all entered data
+- One-click submission
 - Reset functionality
 
-The stepper includes a complete user registration flow with personal information, contact details, address, and review steps.
+## Form Structure
+
+The stepper includes four main sections:
+
+1. **Personal Information**: First Name, Last Name (both required)
+2. **Contact Information**: Email (validated format), Phone Number (both required)
+3. **Address Information**: Street Address, City, ZIP Code (all required)
+4. **Review & Submit**: Summary with submit and reset options
+
+## Implementation Details
+
+The component uses Angular Reactive Forms with built-in validators:
+
+\`\`\`typescript
+// Personal Information Form
+this.firstFormGroup = this.formBuilder.group({
+  firstNameCtrl: ['', Validators.required],
+  lastNameCtrl: ['', Validators.required],
+});
+
+// Contact Information Form
+this.secondFormGroup = this.formBuilder.group({
+  emailCtrl: ['', [Validators.required, Validators.email]],
+  phoneCtrl: ['', Validators.required],
+});
+\`\`\`
+
+## Best Practices
+
+### When to Use Linear vs Non-Linear
+
+- **Use Linear** for:
+  - Multi-step forms where data depends on previous steps
+  - Onboarding flows with sequential information
+  - Processes that must be completed in order
+
+- **Use Non-Linear** for:
+  - Forms where steps are independent
+  - When users need to review/edit multiple sections
+  - Configuration wizards with optional steps
+
+### Accessibility Considerations
+
+- Each step has a descriptive label
+- Form validation provides clear error messages
+- Keyboard navigation is fully supported
+- Screen reader friendly with proper ARIA labels
+
+### Mobile Optimization
+
+For mobile devices, consider:
+- Using vertical orientation
+- Larger touch targets for navigation buttons
+- Simplified form layouts
+- Progressive disclosure of information
+
+## Browser Support
+
+This component supports all modern browsers that support Angular Material:
+- Chrome 70+
+- Firefox 63+
+- Safari 12+
+- Edge 79+
         `,
       },
     },
