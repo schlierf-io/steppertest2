@@ -10,44 +10,44 @@ const meta: Meta<StepperExampleComponent> = {
     docs: {
       description: {
         component: `
-# Angular Material Stepper Component
+# Angular Material Stepper Komponente
 
-The Angular Material Stepper provides a wizard-like workflow by dividing content into logical steps. This component is perfect for multi-step forms, onboarding flows, and any process that requires sequential user input.
+Der Angular Material Stepper bietet einen Assistent-ähnlichen Workflow, indem er Inhalte in logische Schritte unterteilt. Diese Komponente ist perfekt für mehrstufige Formulare, Onboarding-Flows und alle Prozesse, die sequenzielle Benutzereingaben erfordern.
 
-## Key Features
+## Hauptmerkmale
 
-### 🔄 Multiple Navigation Modes
-- **Linear**: Users must complete each step in order
-- **Non-linear**: Users can navigate freely between steps
+### 🔄 Mehrere Navigationsmodi
+- **Linear**: Benutzer müssen jeden Schritt der Reihe nach abschließen
+- **Nicht-linear**: Benutzer können frei zwischen Schritten navigieren
 
-### ✏️ Editable Steps
-- Allow users to return and modify completed steps
-- Lock completed steps to prevent changes
+### ✏️ Bearbeitbare Schritte
+- Benutzern erlauben, abgeschlossene Schritte zu bearbeiten
+- Abgeschlossene Schritte sperren, um Änderungen zu verhindern
 
 ### 📱 Responsive Design
-- Horizontal layout for desktop
-- Vertical layout optimized for mobile
-- Flexible label positioning
+- Horizontales Layout für Desktop
+- Vertikales Layout für mobile Geräte
+- Flexible Label-Positionierung
 
-### ✅ Form Validation
-- Real-time validation feedback
-- Required field validation
-- Email format validation
-- Error messages for each field
+### ✅ Formular-Validierung
+- Echtzeit-Validierungs-Feedback
+- Pflichtfeld-Validierung
+- E-Mail-Format-Validierung
+- Fehlermeldungen für jedes Feld
 
-### 📋 Review & Submit
-- Summary of all entered data
-- One-click submission
-- Reset functionality
+### 📋 Überprüfung & Absenden
+- Zusammenfassung aller eingegebenen Daten
+- Ein-Klick-Übermittlung
+- Zurücksetzen-Funktionalität
 
-## Form Structure
+## Formular-Struktur
 
-The stepper includes four main sections:
+Der Stepper umfasst vier Hauptabschnitte:
 
-1. **Personal Information**: First Name, Last Name (both required)
-2. **Contact Information**: Email (validated format), Phone Number (both required)
-3. **Address Information**: Street Address, City, ZIP Code (all required)
-4. **Review & Submit**: Summary with submit and reset options
+1. **Persönliche Informationen**: Vorname, Nachname (beide erforderlich)
+2. **Kontaktinformationen**: E-Mail (validiertes Format), Telefonnummer (beide erforderlich)
+3. **Adressinformationen**: Straße und Hausnummer, Stadt, Postleitzahl (alle erforderlich)
+4. **Überprüfung & Absenden**: Zusammenfassung mit Absenden- und Zurücksetzen-Optionen
 
 ## Implementation Details
 
@@ -218,7 +218,7 @@ export const LabelsAtBottom: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Horizontal stepper with labels positioned at the bottom of step icons.',
+        story: 'Horizontaler Stepper mit Labels, die unterhalb der Schritt-Icons positioniert sind.'
       },
     },
   },
@@ -234,7 +234,7 @@ export const VerticalNonLinear: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Vertical stepper with non-linear navigation, allowing free movement between steps.',
+        story: 'Vertikaler Stepper mit nicht-linearer Navigation, die freie Bewegung zwischen Schritten ermöglicht.'
       },
     },
   },
@@ -253,7 +253,7 @@ export const MobileOptimized: Story = {
     },
     docs: {
       description: {
-        story: 'Vertical stepper optimized for mobile devices with responsive form layout.',
+        story: 'Vertikaler Stepper, optimiert für mobile Geräte mit responsiver Formular-Layout.'
       },
     },
   },
@@ -269,7 +269,7 @@ export const StrictWorkflow: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Strict workflow stepper - linear navigation with no editing of completed steps.',
+        story: 'Strikter Workflow-Stepper - lineare Navigation ohne Möglichkeit zum Bearbeiten abgeschlossener Schritte.'
       },
     },
   },

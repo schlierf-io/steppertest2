@@ -24,109 +24,109 @@ import { MatIconModule } from '@angular/material/icon';
       [labelPosition]="labelPosition"
       #stepper>
       
-      <!-- Step 1: Personal Information -->
+      <!-- Step 1: Persönliche Informationen -->
       <mat-step [stepControl]="firstFormGroup" [editable]="editable">
         <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel>Personal Information</ng-template>
+          <ng-template matStepLabel>Persönliche Informationen</ng-template>
           
           <mat-form-field appearance="outline" class="full-width">
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="Enter your first name" 
+            <mat-label>Vorname</mat-label>
+            <input matInput placeholder="Geben Sie Ihren Vornamen ein" 
                    formControlName="firstNameCtrl" required>
             <mat-error *ngIf="firstFormGroup.get('firstNameCtrl')?.hasError('required')">
-              First name is required
+              Vorname ist erforderlich
             </mat-error>
           </mat-form-field>
           
           <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="Enter your last name" 
+            <mat-label>Nachname</mat-label>
+            <input matInput placeholder="Geben Sie Ihren Nachnamen ein" 
                    formControlName="lastNameCtrl" required>
             <mat-error *ngIf="firstFormGroup.get('lastNameCtrl')?.hasError('required')">
-              Last name is required
+              Nachname ist erforderlich
             </mat-error>
           </mat-form-field>
           
           <div class="button-row">
-            <button mat-raised-button color="primary" matStepperNext>Next</button>
+            <button mat-raised-button color="primary" matStepperNext>Weiter</button>
           </div>
         </form>
       </mat-step>
 
-      <!-- Step 2: Contact Information -->
+      <!-- Step 2: Kontaktinformationen -->
       <mat-step [stepControl]="secondFormGroup" [editable]="editable">
         <form [formGroup]="secondFormGroup">
-          <ng-template matStepLabel>Contact Information</ng-template>
+          <ng-template matStepLabel>Kontaktinformationen</ng-template>
           
           <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Enter your email" 
+            <mat-label>E-Mail</mat-label>
+            <input matInput placeholder="Geben Sie Ihre E-Mail-Adresse ein" 
                    formControlName="emailCtrl" required type="email">
             <mat-error *ngIf="secondFormGroup.get('emailCtrl')?.hasError('required')">
-              Email is required
+              E-Mail ist erforderlich
             </mat-error>
             <mat-error *ngIf="secondFormGroup.get('emailCtrl')?.hasError('email')">
-              Please enter a valid email
+              Bitte geben Sie eine gültige E-Mail-Adresse ein
             </mat-error>
           </mat-form-field>
           
           <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Phone Number</mat-label>
-            <input matInput placeholder="Enter your phone number" 
+            <mat-label>Telefonnummer</mat-label>
+            <input matInput placeholder="Geben Sie Ihre Telefonnummer ein" 
                    formControlName="phoneCtrl" required>
             <mat-error *ngIf="secondFormGroup.get('phoneCtrl')?.hasError('required')">
-              Phone number is required
+              Telefonnummer ist erforderlich
             </mat-error>
           </mat-form-field>
           
           <div class="button-row">
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-raised-button color="primary" matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Zurück</button>
+            <button mat-raised-button color="primary" matStepperNext>Weiter</button>
           </div>
         </form>
       </mat-step>
 
-      <!-- Step 3: Address Information -->
+      <!-- Step 3: Adressinformationen -->
       <mat-step [stepControl]="thirdFormGroup" [editable]="editable">
         <form [formGroup]="thirdFormGroup">
-          <ng-template matStepLabel>Address</ng-template>
+          <ng-template matStepLabel>Adresse</ng-template>
           
           <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Street Address</mat-label>
-            <input matInput placeholder="Enter your street address" 
+            <mat-label>Straße und Hausnummer</mat-label>
+            <input matInput placeholder="Geben Sie Ihre Straße und Hausnummer ein" 
                    formControlName="addressCtrl" required>
             <mat-error *ngIf="thirdFormGroup.get('addressCtrl')?.hasError('required')">
-              Address is required
+              Adresse ist erforderlich
             </mat-error>
           </mat-form-field>
           
           <div class="address-row">
             <mat-form-field appearance="outline" class="city-field">
-              <mat-label>City</mat-label>
-              <input matInput placeholder="City" 
+              <mat-label>Stadt</mat-label>
+              <input matInput placeholder="Stadt" 
                      formControlName="cityCtrl" required>
             </mat-form-field>
             
             <mat-form-field appearance="outline" class="zip-field">
-              <mat-label>ZIP Code</mat-label>
-              <input matInput placeholder="ZIP" 
+              <mat-label>Postleitzahl</mat-label>
+              <input matInput placeholder="PLZ" 
                      formControlName="zipCtrl" required>
             </mat-form-field>
           </div>
           
           <div class="button-row">
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-raised-button color="primary" matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Zurück</button>
+            <button mat-raised-button color="primary" matStepperNext>Weiter</button>
           </div>
         </form>
       </mat-step>
 
-      <!-- Step 4: Review & Submit -->
+      <!-- Step 4: Überprüfung & Absenden -->
       <mat-step [editable]="editable">
-        <ng-template matStepLabel>Review & Submit</ng-template>
+        <ng-template matStepLabel>Überprüfung & Absenden</ng-template>
         
         <div class="review-section">
-          <h3>Please review your information:</h3>
+          <h3>Bitte überprüfen Sie Ihre Angaben:</h3>
           
           <div class="review-item">
             <strong>Name:</strong> 
@@ -135,15 +135,15 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
           
           <div class="review-item">
-            <strong>Email:</strong> {{ secondFormGroup.get('emailCtrl')?.value }}
+            <strong>E-Mail:</strong> {{ secondFormGroup.get('emailCtrl')?.value }}
           </div>
           
           <div class="review-item">
-            <strong>Phone:</strong> {{ secondFormGroup.get('phoneCtrl')?.value }}
+            <strong>Telefon:</strong> {{ secondFormGroup.get('phoneCtrl')?.value }}
           </div>
           
           <div class="review-item">
-            <strong>Address:</strong> 
+            <strong>Adresse:</strong> 
             {{ thirdFormGroup.get('addressCtrl')?.value }}, 
             {{ thirdFormGroup.get('cityCtrl')?.value }} 
             {{ thirdFormGroup.get('zipCtrl')?.value }}
