@@ -69,36 +69,36 @@ this.secondFormGroup = this.formBuilder.group({
 
 ## Best Practices
 
-### When to Use Linear vs Non-Linear
+### Wann Linear vs Nicht-Linear verwenden
 
-- **Use Linear** for:
-  - Multi-step forms where data depends on previous steps
-  - Onboarding flows with sequential information
-  - Processes that must be completed in order
+- **Linear verwenden** für:
+  - Mehrstufige Formulare, bei denen die Daten von vorherigen Schritten abhängen
+  - Onboarding-Flows mit sequenziellen Informationen
+  - Prozesse, die der Reihe nach abgeschlossen werden müssen
 
-- **Use Non-Linear** for:
-  - Forms where steps are independent
-  - When users need to review/edit multiple sections
-  - Configuration wizards with optional steps
+- **Nicht-linear verwenden** für:
+  - Formulare, bei denen die Schritte unabhängig sind
+  - Wenn Benutzer mehrere Abschnitte überprüfen/bearbeiten müssen
+  - Konfigurations-Assistenten mit optionalen Schritten
 
-### Accessibility Considerations
+### Barrierefreiheit
 
-- Each step has a descriptive label
-- Form validation provides clear error messages
-- Keyboard navigation is fully supported
-- Screen reader friendly with proper ARIA labels
+- Jeder Schritt hat eine aussagekräftige Beschriftung
+- Formular-Validierung liefert klare Fehlermeldungen
+- Vollständige Tastatur-Navigation wird unterstützt
+- Screenreader-freundlich mit korrekten ARIA-Labels
 
-### Mobile Optimization
+### Mobile Optimierung
 
-For mobile devices, consider:
-- Using vertical orientation
-- Larger touch targets for navigation buttons
-- Simplified form layouts
-- Progressive disclosure of information
+Für mobile Geräte sollten Sie berücksichtigen:
+- Verwendung vertikaler Ausrichtung
+- Größere Touch-Ziele für Navigations-Buttons
+- Vereinfachte Formular-Layouts
+- Progressive Offenlegung von Informationen
 
-## Browser Support
+## Browser-Unterstützung
 
-This component supports all modern browsers that support Angular Material:
+Diese Komponente unterstützt alle modernen Browser, die Angular Material unterstützen:
 - Chrome 70+
 - Firefox 63+
 - Safari 12+
@@ -118,14 +118,14 @@ This component supports all modern browsers that support Angular Material:
     },
     linear: {
       control: 'boolean',
-      description: 'Whether the stepper is linear (requires completing previous steps)',
+      description: 'Ob der Stepper linear ist (erfordert das Abschließen der vorherigen Schritte)',
       table: {
         defaultValue: { summary: 'true' },
       },
     },
     editable: {
       control: 'boolean',
-      description: 'Whether completed steps can be edited',
+      description: 'Ob abgeschlossene Schritte bearbeitet werden können',
       table: {
         defaultValue: { summary: 'true' },
       },
@@ -133,7 +133,7 @@ This component supports all modern browsers that support Angular Material:
     labelPosition: {
       control: 'select',
       options: ['bottom', 'end'],
-      description: 'Position of step labels (only applies to horizontal orientation)',
+      description: 'Position der Schritt-Labels (wird nur auf horizontaler Ausrichtung angewendet)',
       table: {
         defaultValue: { summary: 'end' },
       },
@@ -154,7 +154,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Default horizontal stepper with linear navigation and editable steps.',
+        story: 'Standard horizontaler Stepper mit linearer Navigation und bearbeitbaren Schritten.'
       },
     },
   },
@@ -170,7 +170,7 @@ export const Vertical: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Vertical stepper layout, useful for mobile interfaces or when you have more content in each step.',
+        story: 'Vertikales Stepper-Layout, nützlich für mobile Interfaces oder wenn Sie mehr Inhalt pro Schritt haben.'
       },
     },
   },
@@ -186,7 +186,7 @@ export const NonLinear: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Non-linear stepper allows users to navigate to any step without completing previous ones.',
+        story: 'Nicht-linearer Stepper ermöglicht Benutzern die Navigation zu jedem Schritt ohne vorherige Abschlüsse.'
       },
     },
   },
@@ -202,7 +202,7 @@ export const NonEditable: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Non-editable stepper prevents users from going back to modify completed steps.',
+        story: 'Nicht-bearbeitbarer Stepper verhindert, dass Benutzer zu abgeschlossenen Schritten zurückkehren können.',
       },
     },
   },

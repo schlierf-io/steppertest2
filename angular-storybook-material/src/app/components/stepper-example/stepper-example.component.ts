@@ -151,12 +151,12 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
         
         <div class="button-row">
-          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperPrevious>Zurück</button>
           <button mat-raised-button color="accent" (click)="onSubmit()">
             <mat-icon>check</mat-icon>
-            Submit
+            Absenden
           </button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button mat-button (click)="stepper.reset()">Zurücksetzen</button>
         </div>
       </mat-step>
     </mat-stepper>
