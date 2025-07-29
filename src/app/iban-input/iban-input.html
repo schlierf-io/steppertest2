@@ -1,0 +1,18 @@
+<mat-form-field appearance="outline" class="iban-input-field">
+  <mat-label>{{label}}</mat-label>
+  <input 
+    matInput 
+    [formControl]="formControl"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    (blur)="onBlur()"
+    (keydown)="onKeyDown($event)"
+    maxlength="27"
+    autocomplete="off"
+    spellcheck="false">
+  <mat-icon matSuffix>account_balance</mat-icon>
+  <mat-hint>German IBAN format: DE89 3704 0044 0532 0130 00</mat-hint>
+  <mat-error *ngIf="formControl.invalid && formControl.touched">
+    {{getErrorMessage()}}
+  </mat-error>
+</mat-form-field>
